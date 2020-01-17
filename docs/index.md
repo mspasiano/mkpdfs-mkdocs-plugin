@@ -1,63 +1,62 @@
-# MkPDFs <small>for MkDocs</small>
+# Sistema Informativo Gestione Linee di Attività
 
-### Generate nice documentation PDFs.
+## Introduzione
 
-MkPDFs for MkDocs is a plugin for [MkDocs][1], a nice static site generator
-designed for project documentation.
+Al fine di fornire elementi generali della Soluzione applicativa, evidenziamo informazioni di sintesi sul Sistema Contabile SIGLA, di proprietà del CNR, che si occupa di processi amministrativi e contabili, di previsione, gestione e di rendicontazione. Il Sistema si rivolge ad Enti pubblici, in particolare Enti di ricerca, che operano in regime di Contabilità Finanziaria, con obbligo di adozione, in aggiunta, del sistema di contabilità basato su rilevazione dei fatti di gestione in termini economici, patrimoniali ed analitici.
 
-[![MkPDFs for MkDocs](assets/images/mkpdfs.png)](assets/images/mkpdfs.png)
+## Premessa
 
+L'attività di progettazione e sviluppo dell'applicazione è stata avviata nel 2001 quando emerse per il CNR la necessità di dotarsi di un nuovo sistema integrato per la gestione della contabilità, in attuazione del Regolamento di disciplina dell'amministrazione e dell'attività contrattuale del CNR, approvato con DPCNR n. 015448 del 14/01/2000, ispirato ai nuovi principi di contabilità pubblica introdotti dalla legge 94/97 e dal Decreto legislativo 279/97.
+Una significativa revisione dell'impianto dell'applicazione è stata operata durante il 2004, in attuazione del decreto legislativo n. 127 del 4/06/2003, al fine di migliorare il controllo di gestione delle risorse ed allineare la gestione contabile interna ai criteri di rendicontazione dei progetti (con particolare riferimento a progetti europei e nazionali).
+Ad oggi il sistema informativo SIGLA risulta completamente coerente ed adattabile all’impostazione dei bilanci ed alla gestione delle attività previste dalla normativa vigente in materia di contabilità pubblica.
 
-What makes this plugin different to other MkDocs pdf generator plugins, is that it's not dependent to a given plugin and may work with absolutely any MkDocs theme.
+## Informazioni generali del Sistema 
+Il **S**istema **I**ntegrato per la **G**estione delle **L**inee di **A**ttività è un sistema applicativo modulare, organizzato in componenti funzionali integrate tra loro e gestibili autonomamente l’una dall’altra.
 
-  [1]: https://www.mkdocs.org
+**L’accesso** al sistema, anche tramite web, ai dati e alle funzionalità, è controllato da parte degli amministratori del sistema attraverso la definizione di profili utente che limitano la visibilità e l’utilizzo delle funzioni, nonché la gestione di alcuni dati o l’utilizzo di particolari funzionalità. L’accesso all’applicazione è veicolato anche alla struttura organizzativa dell’Ente a cui si è abilitati.
+La soluzione applicativa è ‘Multiente’ e si articola su tre livelli di organizzazione dell’Ente, che nel caso specifico del CNR, sono:
+    • Centro di Spesa;
+    • Unità Organizzativa;
+    • Centro di Responsabilità.
 
-### Requirements
-Before you start, make sure that your system meets the following requirements:
+**L’architettura** e la tecnologia utilizzate nello sviluppo consentono una facile manutenzione ed evoluzione del sistema. La possibilità di utilizzare o implementare servizi a supporto delle integrazioni, semplifica il dialogo dell’applicazione stessa con altre applicazioni all’interno dell’Ente e consente di poter utilizzare solo alcune componenti SIGLA, sostituendone alcune con quelle eventualmente già presenti nella realtà di interesse. La documentazione e l’help online previsti completano la semplice usabilità dell’applicativo.
+Le interfacce semplici e intuitive dell’applicazione aiutano l’utente ad orientarsi nei vari processi funzionali previsti.
 
-1. MkDocs version 0.17.1 or higher
-2. Python 3.4 or higher
-3. It depends on WeasyPrint which depends on cairo, Pango and GDK-PixBuf. They need to be installed separately. Please follow your platform installation instructions carefully:
-    - [Linux][weasyprint-linux]
-    - [MacOS][weasyprint-macos]
-    - [Windows][weasyprint-windows]
+**Sigla** copre diversi aspetti amministrativi e di gestione contabile, e pone alla base di tutti i processi funzionali il controllo dell’uso delle risorse a supporto dell’attività di ricerca, o di una qualsiasi attività pubblica progettuale. L’elemento trasversale alle varie funzionalità è infatti rappresentato dal Progetto articolato in linee di attività.
+Organizzato in questo modo il sistema prevede gestisce e controlla l’aspetto analitico, a partire dalla fase di previsione fino alla completa rendicontazione, del Bilancio contabile.
 
-### Quick start
-Install the latest version of MkPDFs for MkDocs with `pip`:
+**La possibilità** di estrarre in excel tutti i dati presenti sulle funzioni di consultazione e di produrre report in autonomia, rappresenta una grande utilità per gli utenti che organizzano il proprio lavoro in maniera semplice ed autonoma. Così come la possibilità di schedulare report periodici e di farli recapitare automaticamente al proprio indirizzo mail o a quello di altri collaboratori.
 
-``` sh
-pip3 install mkpdfs-mkdocs
-```
+## Componenti Funzionali SIGLA 
 
-Append the following line to your project's `mkdocs.yml`:
+Le componenti funzionali del Sistema coprono aspetti contabili e aspetti amministrativo-contabili che forniscono automaticamente risultati contabili. Gli argomenti possono essere raggruppati come di seguito indicato e si articolano, chiaramente, in gestioni e funzionalità di dettaglio:
 
-```yaml
-plugins:
-    - search
-    - mkpdfs
-```
+    • Gestione delle utenze e degli aspetti di configurazione del Sistema
+        ◦ Amministrazione dei Profili e delle Abilitazioni;
+        ◦ Definizione Struttura organizzativa dell’Ente;
+        ◦ Configurazione del sistema.
 
-or with options
+    • Gestione delle Anagrafiche fondamentali
+        ◦ Progetti e GAE (gestione azioni elementari);
+        ◦ Anagrafica Terzi;
+        ◦ Piano dei Conti Finanziario ed Economico;
+        ◦ Anagrafiche di base.
 
-```yaml
-plugins:
-    - search
-    - mkpdfs:
-        company: The War Company Inc.
-        author: Monsieur Silvestre
-```
+    • Gestione della Programmazione Economica e Finanziaria
+        ◦ Bilancio di previsione Decisionale/Gestionale;
+        ◦ Variazioni e Storni di Bilancio.
 
-### Does it work?
+    • Gestione contabile;
+        ◦ Impegni e Accertamenti;
+        ◦ Mandati, Reversali e interfaccia Cassiere;
+        ◦ Documenti Amministrativi;
+        ◦ Gestione IVA.
 
-Now run `mkdocs serve` to run the dev server or `mkdocs build` to build your documentation. If the installation went, well you should see the following message:
+    • Gestioni consuntive;
+        ◦ Gestione delle rendicontazioni analitiche;
+        ◦ Bilancio economico;
+        ◦ Operazioni di fine anno.
 
-> The PDF version of the documentation has been generated.
-
-
-For detailed instructions see the [getting started guide][3].
-
-  [3]: getting-started.md
-
-  [weasyprint-linux]: https://weasyprint.readthedocs.io/en/latest/install.html#linux
-  [weasyprint-macos]: https://weasyprint.readthedocs.io/en/latest/install.html#macos
-  [weasyprint-windows]: https://weasyprint.readthedocs.io/en/latest/install.html#windows
+    • Gestione delle Missioni;
+    • Gestione degli Incarichi di collaborazione;
+    • Gestione dell’Inventario.
